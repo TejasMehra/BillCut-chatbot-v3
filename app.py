@@ -36,7 +36,7 @@ Your job:
 - Let the user lead — end the conversation naturally without forcing lines like “Want me to explain in detail?”.
 - If the user uses even a little Hindi or Hinglish — or mixes English and Hindi — always reply in Hinglish. 
 - Never default to English if Hindi or Hinglish is present in any form. Prefer Hinglish over Hindi if the user types in Latin script.
-
+- When replying in Hinglish or Hindi, be just as clear and specific as in English. Do not simplify or shorten your answer unless the user asks for it.
 
 Never start replies with “Hi” or “Hey”.
 """
@@ -46,18 +46,25 @@ faq_responses = {
     "what is billcut": "BillCut is a fintech company that does debt refinancing. Want to know more?",
     "does billcut charge": "BillCut doesn’t charge any fees, except ₹19 for a session with our legal advisor during debt settlement.",
     "interest rate": "The interest rate is usually between 12 to 19 percent.",
-    "multiple loans": "Yes! You can combine multiple  loans into a single loan  .",
-    "how does billcut pay": "BillCut works with NBFCs. They provide the loan for your existing loans ",
+    "multiple loans": "Yes! You can combine multiple loans into a single loan.",
+    "how does billcut pay": "BillCut works with NBFCs. They provide the loan for your existing loans.",
     "will the funds come": "Yes! Funds come to your account — except in balance transfers, which may use a demand draft.",
     "foreclosure charge": "It's around 3% of the remaining amount.",
     "credit score": "Nope! Your score won’t be affected — unless you go for debt settlement.",
-    "why work email": "Just to verify your job in the company , we wont be sending any mails on it ",
+    "why work email": "Just to verify your job in the company — we won’t send any mails on it.",
     "what is demand draft": "It's like a prepaid cheque — but safer, and it can’t bounce.",
     "what are nbfc": "NBFCs give loans like banks — but they’re not banks.",
     "full form of nbfc": "NBFC stands for Non-Banking Financial Company.",
     "how does billcut pay credit card": "BillCut pays your card via its lending partners.",
-    "what is debt settlement": "Debt settlement means reducing your outstanding loan or credit card dues — up to 50% — if you're under financial stress or facing recovery calls. It’s not a loan."
+    "what is debt settlement": "Debt settlement means reducing your outstanding loan or credit card dues — up to 50% — if you're under financial stress or facing recovery calls. It’s not a loan.",
+
+    "ye hai kya": "BillCut ek fintech platform hai jo aapki loans aur credit card dues ko refinance karta hai. Hum EMI bana dete hain taaki repayment easy ho jaaye. Aur agar situation tight hai, toh debt settlement bhi karwate hain.",
+    "emi kam kaise hogi": "Hum aapke high-interest loans ko ek NBFC ke through refinance karwate hain. Iss se interest rate kam hota hai aur aapki monthly EMI manageable ban jaati hai.",
+    "loan kaise milega": "Aapki profile check karne ke baad, BillCut ka partner NBFC aapke existing loans ke liye paisa transfer karta hai. Fir aap us loan ko repay karte ho simple EMIs mein.",
+    "debt settlement kya hota hai": "Debt settlement ek option hai jab aap pura loan ya credit card repay nahi kar pa rahe ho. Hum bank ke saath negotiate karte hain taaki amount reduce ho jaaye — up to 50% tak bhi.",   
+    "credit score pe asar padega?": "Refinance karne se score safe rehta hai. Lekin agar aap debt settlement choose karte ho toh score temporarily impact ho sakta hai."
 }
+
 
 detailed_followups = {
     "what is billcut": "Sure! BillCut is a financial platform that helps you manage and reduce your existing debt. We partner with NBFCs (Non-Banking Financial Companies) to refinance your high-interest credit card bills and personal loans into affordable EMIs. This makes your repayments easier and more predictable. We also offer a debt settlement service for people going through tough financial situations. Would you like me to explain how settlement works too?",  
@@ -76,7 +83,7 @@ repeat_followups = {
 
 # --- Streamlit App UI ---
 st.title("👋 Hi, how can I help you?")
-st.caption("Type full questions in Hindi, Hinglish, or English — I will match your style!")
+st.caption("Type full questions in Hindi, Hinglish, or English — I will match your style! (v3.1 build)")
 
 # --- Session State ---
 if "chat" not in st.session_state:
