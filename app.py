@@ -32,7 +32,9 @@ Your tone is:
 Your job:
 - Explain how BillCut helps with loans, EMIs, debt settlement, and money habits.
 - Use short, clear sentences.
-- Bring the conversation back to BillCut when possible.
+- Bring the conversation back to BillCut when possible. 
+- Use all the information given and dont create stuff on your own. Use both hinglish and english data given but reply in the language user uses.
+- If question is out of context and you dont know what to do then ask them to reach out to us on mail for any further help.
 - Let the user lead — end the conversation naturally without forcing lines like “Want me to explain in detail?”.
 - If the user uses even a little Hindi or Hinglish — or mixes English and Hindi — always reply in Hinglish. 
 - Never default to English if Hindi or Hinglish is present in any form. Prefer Hinglish over Hindi if the user types in Latin script.
@@ -58,18 +60,32 @@ faq_responses = {
     "how does billcut pay credit card": "BillCut pays your card via its lending partners.",
     "what is debt settlement": "Debt settlement means reducing your outstanding loan or credit card dues — up to 50% — if you're under financial stress or facing recovery calls. It’s not a loan.",
 
-    "ye hai kya": "BillCut ek fintech platform hai jo aapki loans aur credit card dues ko refinance karta hai. Hum EMI bana dete hain taaki repayment easy ho jaaye. Aur agar situation tight hai, toh debt settlement bhi karwate hain.",
-    "emi kam kaise hogi": "Hum aapke high-interest loans ko ek NBFC ke through refinance karwate hain. Iss se interest rate kam hota hai aur aapki monthly EMI manageable ban jaati hai.",
-    "loan kaise milega": "Aapki profile check karne ke baad, BillCut ka partner NBFC aapke existing loans ke liye paisa transfer karta hai. Fir aap us loan ko repay karte ho simple EMIs mein.",
-    "debt settlement kya hota hai": "Debt settlement ek option hai jab aap pura loan ya credit card repay nahi kar pa rahe ho. Hum bank ke saath negotiate karte hain taaki amount reduce ho jaaye — up to 50% tak bhi.",   
-    "credit score pe asar padega?": "Refinance karne se score safe rehta hai. Lekin agar aap debt settlement choose karte ho toh score temporarily impact ho sakta hai."
+    "BillCut kya hai": "BillCut ek  fintech company jo appke purane loans ko pay karti hai.Appko aur jaana hai ?",
+    "Kya BillCut pese chargeg karta hai": "Nahi BillCut koi pese nahi charge karta hai , bas ₹19 charge kargea legal team ke saath meeting ke leye debtsettlment mein.",
+    "Kitna interest rate": "Interest rate 12 se 19 ke beech mein hota hai generally .",
+    "Bohot zyada loans ": "Ji, BillCut aapke saare loans ko ek mein kar sakti hai  .",
+    "Pay kese karta hai BillCut ": "BillCut  NBFCs ke saath kaam karta hai . Woh loan dede hai aapke purane loan ko clear karne ke leye ",
+    "Pesse mere account mein ayenge ": "Yes! Paise aapke account mein ayenge — Bas balance transfer mein demand draft milta hai",
+    "Loan ki payment jaldi karne pe charge ": "Loan ke payment jaldi karne ke bad band karne ka charge 3 percent ka hota hai genereally .",
+    "credit score": " Aapka credit score nahi kharab hoga , bas debt settlelment mein aapka credit score kharab hoga.",
+    "work email": "Hum work email bas verify karrne ke leye mangte hai ki aap uss company mein kaam karte hai , hum koi email nahi bhejenge uspe",
+    "Demand draft kya hai": "Ek  prepaid cheque ke tarah hota hai — par safer hota hai aur bounce nahi hosakta.",
+    "NBFC kya hai ": "NBFCs bank ke tarah loans dete hai — par woh bank nahi hai .",
+    "NBFC ka full form": "NBFC ka full form hai Non-Banking Financial Company.",
+    "BillCut credit card bill kese pay karta hai ": "Billcut aapke credit card ka payment apne partners ke through karta hai.",
+    "Debt settlement kya hai": "Debt settlement mein hum aapke outstanding loan or credit card dues ko kam karte hai — up to 50% — agar aap koi  financial stress or recovery calls. Yeh loan nahi hai."
 }
 
 
 detailed_followups = {
     "what is billcut": "Sure! BillCut is a financial platform that helps you manage and reduce your existing debt. We partner with NBFCs (Non-Banking Financial Companies) to refinance your high-interest credit card bills and personal loans into affordable EMIs. This makes your repayments easier and more predictable. We also offer a debt settlement service for people going through tough financial situations. Would you like me to explain how settlement works too?",  
     "how does billcut pay credit card": "Absolutely. BillCut, through its lending partners, helps you pay off your credit card bill in full. Here’s how it works: the NBFC transfers funds to your bank account — once you receive the money, you pay your credit card bill and show us the proof. Meanwhile, the amount is converted into a single, low-interest EMI which you repay gradually. This process is simple, transparent, and designed to ease your monthly financial load.",
-    "what is debt settlement": "Debt settlement is a special service we offer if you're under serious financial stress or facing recovery calls. In this case, BillCut negotiates with your bank or credit card issuer to reduce the total amount you owe — up to 50%. Instead of taking a loan, you settle your dues with a one-time payment or structured plan. Please note, while this does impact your credit score, it's a great option if you're struggling to repay the full amount. Want help checking your eligibility?"
+    "what is debt settlement": "Debt settlement is a special service we offer if you're under serious financial stress or facing recovery calls. In this case, BillCut negotiates with your bank or credit card issuer to reduce the total amount you owe — up to 50%. Instead of taking a loan, you settle your dues with a one-time payment or structured plan. Please note, while this does impact your credit score, it's a great option if you're struggling to repay the full amount. Want help checking your eligibility?",
+    
+    "Billcut kya hai": "BillCut ek financial platform hai jo aapke existing debt ko manage aur reduce karne mein madad karta hai. Hum NBFCs (Non-Banking Financial Companies) ke saath partner karte hain taaki aapke high-interest credit card bills aur personal loans ko affordable EMIs mein refinance kiya ja sake. Isse aapki repayments asaan aur predictable ho jaati hain. Hum debt settlement service bhi offer karte hain un logon ke liye jo financial mushkil ghadi se guzar rahe hain. Kya aap chaahenge ki main aapko bataun ki settlement kaise kaam karta hai?",
+    "BillCut credit card bill kese pay karta hai ": "Bilkul. BillCut apne lending partners ke through aapka credit card ka bill poori tarah clear karne mein madad karta hai. Yeh process is tarah se kaam karta hai: NBFC paise aapke bank account mein transfer karta hai — jaise hi aap paise receive karte hain, aap apna credit card bill pay karte hain aur humein proof dikhate hain. Is beech, woh amount ek single, low-interest EMI mein convert ho jata hai, jo aap dheere-dheere repay karte hain. Yeh process simple, transparent, aur aapke monthly financial load ko aasan banane ke liye design kiya gaya hai.",
+    "Debt settlement kya hai ": "Debt settlement ek special service hai jo hum tab offer karte hain jab aap serious financial stress mein ho ya recovery calls face kar rahe ho. Is case mein, BillCut aapke bank ya credit card issuer se negotiate karke aapki total outstanding amount ko reduce karta hai—up to 50%. Loan lene ki jagah, aap ek one-time payment ya structured plan ke through apne dues settle kar lete ho. Kripya note karein, isse aapke credit score par thoda impact ho sakta hai, lekin agar aap poora amount repay karne mein struggle kar rahe ho to yeh ek great option hai. Kya aap eligibility check karwana chahoge?"
+
 }
 
 repeat_followups = {
@@ -83,7 +99,7 @@ repeat_followups = {
 
 # --- Streamlit App UI ---
 st.title("👋 Hi, how can I help you?")
-st.caption("Type full questions in Hindi, Hinglish, or English — I will match your style! (v3.1 build)")
+st.caption("Type full questions in Hindi, Hinglish, or English — I will match your style! (v3.2 build)")
 
 # --- Session State ---
 if "chat" not in st.session_state:
