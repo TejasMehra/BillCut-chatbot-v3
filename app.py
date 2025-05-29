@@ -32,76 +32,67 @@ Your tone is:
 Your job:
 - Explain how BillCut helps with loans, EMIs, debt settlement, and money habits.
 - Use short, clear sentences.
-- Bring the conversation back to BillCut when possible. 
-- You will receive a list of predefined questions and their exact replies. 
-- If the user’s message **closely matches** any of the predefined questions — even if phrased slightly differently — reply with the corresponding answer exactly as given. Do not rephrase or improvise.
-- If the question is unclear or off-topic, politely ask the user to reach out to BillCut via email.
-- Only fall back to your own understanding if nothing in the provided list is even slightly relevant.
-- Let the user lead — end the conversation naturally without forcing lines like “Want me to explain in detail?”.
-- If the user uses even a little Hindi or Hinglish — or mixes English and Hindi — always reply in Hinglish. 
+- Bring the conversation back to BillCut when possible.
+- If the user asks a question that matches or is similar to any of the questions below, respond with the exact answer provided — do not rewrite or improvise.
+- If the question is unclear or off-topic, ask the user to reach out to BillCut at support@billcut.in.
+- Let the user lead — end the conversation naturally without forcing closings like “Want me to explain in detail?”
+- If the user uses even a little Hindi or Hinglish — or mixes English and Hindi — always reply in Hinglish.
 - Never default to English if Hindi or Hinglish is present in any form. Prefer Hinglish over Hindi if the user types in Latin script.
 - When replying in Hinglish or Hindi, be just as clear and specific as in English. Do not simplify or shorten your answer unless the user asks for it.
 
-Never start replies with “Hi” or “Hey”.
+---
+
+🟢 FAQs:
+
+- **What is BillCut** → BillCut is a fintech company that does debt refinancing. Want to know more?
+- **Does BillCut charge** → BillCut doesn’t charge any fees, except ₹19 for a session with our legal advisor during debt settlement.
+- **Interest rate** → The interest rate is usually between 12 to 19 percent.
+- **Multiple loans** → Yes! You can combine multiple loans into a single loan.
+- **How does BillCut pay** → BillCut works with NBFCs. They provide the loan for your existing loans.
+- **Will the funds come** → Yes! Funds come to your account — except in balance transfers, which may use a demand draft.
+- **Foreclosure charge** → It's around 3% of the remaining amount.
+- **Credit score** → Nope! Your score won’t be affected — unless you go for debt settlement.
+- **Why work email** → Just to verify your job in the company — we won’t send any mails on it.
+- **What is demand draft** → It's like a prepaid cheque — but safer, and it can’t bounce.
+- **What are NBFCs** → NBFCs give loans like banks — but they’re not banks.
+- **Full form of NBFC** → NBFC stands for Non-Banking Financial Company.
+- **How does BillCut pay credit card** → BillCut pays your card via its lending partners.
+- **What is debt settlement** → Debt settlement means reducing your outstanding loan or credit card dues — up to 50% — if you're under financial stress or facing recovery calls. It’s not a loan.
+
+- **BillCut kya hai** → BillCut ek fintech company jo aapke purane loans ko pay karti hai. Aapko aur jaana hai?
+- **Kya BillCut pese charge karta hai** → Nahi, BillCut koi pese nahi charge karta, bas ₹19 lagta hai debt settlement session ke liye.
+- **Kitna interest rate** → Interest rate 12 se 19% ke beech hota hai generally.
+- **Bohot zyada loans** → Ji, BillCut aapke saare loans ko ek mein combine kar sakti hai.
+- **Pay kaise karta hai BillCut** → BillCut NBFCs ke saath kaam karta hai — woh aapke purane loan ke liye paisa dete hain.
+- **Paise mere account mein ayenge?** → Haan, paisa aapke account mein aata hai — bas balance transfer mein demand draft milta hai.
+- **Loan jaldi repay karne pe charge** → Generally, 3% ka foreclosure charge lagta hai.
+- **Credit score kharab hoga?** → Refinance se nahi, but debt settlement se thoda impact pad sakta hai.
+- **Work email kyun chahiye?** → Sirf verify karne ke liye. Hum kabhi email nahi bhejte.
+- **Demand draft kya hai?** → Ek prepaid cheque jaisa hota hai — lekin secure hota hai aur bounce nahi hota.
+- **NBFC kya hai?** → NBFC bank jaisa loan deta hai — par woh bank nahi hota.
+- **NBFC ka full form?** → Non-Banking Financial Company.
+- **BillCut credit card kaise pay karta hai?** → Partners ke through paisa transfer hota hai, jisse aap credit card clear karte ho.
+
+---
+
+🟡 Detailed Replies:
+
+- **What is BillCut (detailed)** → BillCut helps you manage and reduce existing debt by partnering with NBFCs. We refinance high-interest credit card bills and personal loans into EMIs. We also offer debt settlement if you're in financial distress.
+- **How does BillCut pay credit card (detailed)** → BillCut, via its lending partners, transfers funds to your account. You use that to pay your credit card and show proof. The amount is converted into a low-interest EMI.
+- **What is debt settlement (detailed)** → Debt settlement is for serious financial stress. BillCut negotiates with your bank to reduce total dues by up to 50%. It’s not a loan. It may impact your credit score, but gives relief when needed.
+
+---
+
+🟠 Recaps:
+
+- **BillCut recap** → Just to recap — BillCut helps you turn high-interest debt into affordable EMIs and offers settlement help when needed.
+- **Card payment recap** → Reminder: BillCut doesn’t pay directly. NBFC sends money to your account, you pay the card, and repay the EMI later.
+- **Debt settlement recap** → Settlement reduces your dues when repayment is difficult. We negotiate and support you — not a loan, but a one-time plan.
 """
-
-# --- Scripted Responses ---
-faq_responses = {
-    "what is billcut": "BillCut is a fintech company that does debt refinancing. Want to know more?",
-    "does billcut charge": "BillCut doesn’t charge any fees, except ₹19 for a session with our legal advisor during debt settlement.",
-    "interest rate": "The interest rate is usually between 12 to 19 percent.",
-    "multiple loans": "Yes! You can combine multiple loans into a single loan.",
-    "how does billcut pay": "BillCut works with NBFCs. They provide the loan for your existing loans.",
-    "will the funds come": "Yes! Funds come to your account — except in balance transfers, which may use a demand draft.",
-    "foreclosure charge": "It's around 3% of the remaining amount.",
-    "credit score": "Nope! Your score won’t be affected — unless you go for debt settlement.",
-    "why work email": "Just to verify your job in the company — we won’t send any mails on it.",
-    "what is demand draft": "It's like a prepaid cheque — but safer, and it can’t bounce.",
-    "what are nbfc": "NBFCs give loans like banks — but they’re not banks.",
-    "full form of nbfc": "NBFC stands for Non-Banking Financial Company.",
-    "how does billcut pay credit card": "BillCut pays your card via its lending partners.",
-    "what is debt settlement": "Debt settlement means reducing your outstanding loan or credit card dues — up to 50% — if you're under financial stress or facing recovery calls. It’s not a loan.",
-
-    "BillCut kya hai": "BillCut ek  fintech company jo appke purane loans ko pay karti hai. Appko aur jaana hai ?",
-    "Kya BillCut pese chargeg karta hai": "Nahi BillCut koi pese nahi charge karta hai , bas ₹19 charge kargea legal team ke saath meeting ke leye debtsettlment mein.",
-    "Kitna interest rate": "Interest rate 12 se 19 ke beech mein hota hai generally .",
-    "Bohot zyada loans ": "Ji, BillCut aapke saare loans ko ek mein kar sakti hai  .",
-    "Pay kese karta hai BillCut ": "BillCut  NBFCs ke saath kaam karta hai . Woh loan dede hai aapke purane loan ko clear karne ke leye ",
-    "Pesse mere account mein ayenge ": "Yes! Paise aapke account mein ayenge — Bas balance transfer mein demand draft milta hai",
-    "Loan ki payment jaldi karne pe charge ": "Loan ke payment jaldi karne ke bad band karne ka charge 3 percent ka hota hai genereally .",
-    "credit score": " Aapka credit score nahi kharab hoga , bas debt settlelment mein aapka credit score kharab hoga.",
-    "work email": "Hum work email bas verify karrne ke leye mangte hai ki aap uss company mein kaam karte hai , hum koi email nahi bhejenge uspe",
-    "Demand draft kya hai": "Ek  prepaid cheque ke tarah hota hai — par safer hota hai aur bounce nahi hosakta.",
-    "NBFC kya hai ": "NBFCs bank ke tarah loans dete hai — par woh bank nahi hai .",
-    "NBFC ka full form": "NBFC ka full form hai Non-Banking Financial Company.",
-    "BillCut credit card bill kese pay karta hai ": "Billcut aapke credit card ka payment apne partners ke through karta hai.",
-    "Debt settlement kya hai": "Debt settlement mein hum aapke outstanding loan or credit card dues ko kam karte hai — up to 50% — agar aap koi  financial stress or recovery calls. Yeh loan nahi hai."
-}
-
-
-detailed_followups = {
-    "what is billcut": "Sure! BillCut is a financial platform that helps you manage and reduce your existing debt. We partner with NBFCs (Non-Banking Financial Companies) to refinance your high-interest credit card bills and personal loans into affordable EMIs. This makes your repayments easier and more predictable. We also offer a debt settlement service for people going through tough financial situations. Would you like me to explain how settlement works too?",  
-    "how does billcut pay credit card": "Absolutely. BillCut, through its lending partners, helps you pay off your credit card bill in full. Here’s how it works: the NBFC transfers funds to your bank account — once you receive the money, you pay your credit card bill and show us the proof. Meanwhile, the amount is converted into a single, low-interest EMI which you repay gradually. This process is simple, transparent, and designed to ease your monthly financial load.",
-    "what is debt settlement": "Debt settlement is a special service we offer if you're under serious financial stress or facing recovery calls. In this case, BillCut negotiates with your bank or credit card issuer to reduce the total amount you owe — up to 50%. Instead of taking a loan, you settle your dues with a one-time payment or structured plan. Please note, while this does impact your credit score, it's a great option if you're struggling to repay the full amount. Want help checking your eligibility?",
-    
-    "Billcut kya hai": "BillCut ek financial platform hai jo aapke existing debt ko manage aur reduce karne mein madad karta hai. Hum NBFCs (Non-Banking Financial Companies) ke saath partner karte hain taaki aapke high-interest credit card bills aur personal loans ko affordable EMIs mein refinance kiya ja sake. Isse aapki repayments asaan aur predictable ho jaati hain. Hum debt settlement service bhi offer karte hain un logon ke liye jo financial mushkil ghadi se guzar rahe hain. Kya aap chaahenge ki main aapko bataun ki settlement kaise kaam karta hai?",
-    "BillCut credit card bill kese pay karta hai ": "Bilkul. BillCut apne lending partners ke through aapka credit card ka bill poori tarah clear karne mein madad karta hai. Yeh process is tarah se kaam karta hai: NBFC paise aapke bank account mein transfer karta hai — jaise hi aap paise receive karte hain, aap apna credit card bill pay karte hain aur humein proof dikhate hain. Is beech, woh amount ek single, low-interest EMI mein convert ho jata hai, jo aap dheere-dheere repay karte hain. Yeh process simple, transparent, aur aapke monthly financial load ko aasan banane ke liye design kiya gaya hai.",
-    "Debt settlement kya hai ": "Debt settlement ek special service hai jo hum tab offer karte hain jab aap serious financial stress mein ho ya recovery calls face kar rahe ho. Is case mein, BillCut aapke bank ya credit card issuer se negotiate karke aapki total outstanding amount ko reduce karta hai—up to 50%. Loan lene ki jagah, aap ek one-time payment ya structured plan ke through apne dues settle kar lete ho. Kripya note karein, isse aapke credit score par thoda impact ho sakta hai, lekin agar aap poora amount repay karne mein struggle kar rahe ho to yeh ek great option hai. Kya aap eligibility check karwana chahoge?"
-
-}
-
-repeat_followups = {
-    "what is billcut": "Just to recap — BillCut is here to make your debt more manageable. We convert your high-interest loans into structured EMIs and even help negotiate reductions in extreme cases. If you’re unsure about what’s right for your situation, I’d be happy to guide you through it!",
-    "how does billcut pay credit card": "As a quick reminder — we don’t pay the card directly. Our lending partner sends money to your bank account, you pay your card bill with it, and then you repay that amount to the NBFC in EMIs. Would you like to get started with your application?",
-    "what is debt settlement": "In case you missed it — debt settlement is a way to reduce your total dues if you're unable to repay. It’s not a loan. We negotiate with lenders for you, and if you qualify, it can bring significant relief. Want us to check if you’re eligible?"
-}
-
-
-
 
 # --- Streamlit App UI ---
 st.title("👋 Hi, how can I help you?")
-st.caption("Type full questions in Hindi, Hinglish, or English — I will match your style! (v3.22 build)")
+st.caption("Type full questions in Hindi, Hinglish, or English — I will match your style! (v3.3)")
 
 # --- Session State ---
 if "chat" not in st.session_state:
@@ -114,12 +105,6 @@ if "chat" not in st.session_state:
 if "messages" not in st.session_state:
     st.session_state.messages = []
 
-if "last_question_key" not in st.session_state:
-    st.session_state.last_question_key = None
-
-if "followup_count" not in st.session_state:
-    st.session_state.followup_count = 0
-
 # --- Display Chat History ---
 for msg in st.session_state.messages:
     with st.chat_message(msg["role"]):
@@ -131,57 +116,12 @@ if user_input := st.chat_input("Ask me anything about BillCut..."):
     with st.chat_message("user"):
         st.markdown(user_input)
 
-    input_lower = user_input.lower().strip()
-    response = None
+    try:
+        response = st.session_state.chat.send_message(user_input).text
+    except Exception as e:
+        response = "Oops! Something went wrong. Try again?"
+        print("Gemini error:", e)
 
-    if input_lower in ["yes", "yeah", "sure", "ok", "okay"]:
-        key = st.session_state.last_question_key
-        count = st.session_state.followup_count
-
-        if key:
-            if count == 0 and key in detailed_followups:
-                response = detailed_followups[key]
-                st.session_state.followup_count += 1
-            elif count == 1 and key in repeat_followups:
-                response = repeat_followups[key]
-                st.session_state.followup_count += 1
-            else:
-                try:
-                    # First message soft language nudge
-                    if len(st.session_state.messages) <= 1:
-                        user_input += "\n\n(Please reply in the same language I used above)"
-                    response = st.session_state.chat.send_message(user_input).text
-                except Exception as e:
-                    response = "Oops! Something went wrong. Try again?"
-                    print("Gemini error:", e)
-        else:
-            try:
-                response = st.session_state.chat.send_message(user_input).text
-            except Exception as e:
-                response = "Oops! Something went wrong. Try again?"
-                print("Gemini error:", e)
-
-    else:
-        match = None
-        for key in faq_responses:
-            if key in input_lower:
-                match = key
-                break
-
-        if match:
-            response = faq_responses[match]
-            st.session_state.last_question_key = match
-            st.session_state.followup_count = 0
-        else:
-            try:
-                response = st.session_state.chat.send_message(user_input).text
-            except Exception as e:
-                response = "Oops! Something went wrong. Try again?"
-                print("Gemini error:", e)
-            st.session_state.last_question_key = None
-            st.session_state.followup_count = 0
-
-    # Display response
     st.session_state.messages.append({"role": "assistant", "content": response})
     with st.chat_message("assistant"):
         st.markdown(response)
