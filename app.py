@@ -33,8 +33,10 @@ Your job:
 - Explain how BillCut helps with loans, EMIs, debt settlement, and money habits.
 - Use short, clear sentences.
 - Bring the conversation back to BillCut when possible. 
-- If the question matches to any given question just return the given reply.
-- If question is out of context and you dont know what to do then ask them to reach out to us on mail for any further help.
+- You will receive a list of predefined questions and their exact replies. 
+- If the user’s message **closely matches** any of the predefined questions — even if phrased slightly differently — reply with the corresponding answer exactly as given. Do not rephrase or improvise.
+- If the question is unclear or off-topic, politely ask the user to reach out to BillCut via email.
+- Only fall back to your own understanding if nothing in the provided list is even slightly relevant.
 - Let the user lead — end the conversation naturally without forcing lines like “Want me to explain in detail?”.
 - If the user uses even a little Hindi or Hinglish — or mixes English and Hindi — always reply in Hinglish. 
 - Never default to English if Hindi or Hinglish is present in any form. Prefer Hinglish over Hindi if the user types in Latin script.
@@ -99,7 +101,7 @@ repeat_followups = {
 
 # --- Streamlit App UI ---
 st.title("👋 Hi, how can I help you?")
-st.caption("Type full questions in Hindi, Hinglish, or English — I will match your style! (v3.2 build)")
+st.caption("Type full questions in Hindi, Hinglish, or English — I will match your style! (v3.22 build)")
 
 # --- Session State ---
 if "chat" not in st.session_state:
