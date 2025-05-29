@@ -33,7 +33,7 @@ Your job:
 - Explain how BillCut helps with loans, EMIs, debt settlement, and money habits.
 - Use short, clear sentences.
 - Bring the conversation back to BillCut when possible. 
-- Use all the information given and dont create stuff on your own. Use both hinglish and english data given but reply in the language user uses.
+- If the question matches to any given question just return the given reply.
 - If question is out of context and you dont know what to do then ask them to reach out to us on mail for any further help.
 - Let the user lead — end the conversation naturally without forcing lines like “Want me to explain in detail?”.
 - If the user uses even a little Hindi or Hinglish — or mixes English and Hindi — always reply in Hinglish. 
@@ -60,7 +60,7 @@ faq_responses = {
     "how does billcut pay credit card": "BillCut pays your card via its lending partners.",
     "what is debt settlement": "Debt settlement means reducing your outstanding loan or credit card dues — up to 50% — if you're under financial stress or facing recovery calls. It’s not a loan.",
 
-    "BillCut kya hai": "BillCut ek  fintech company jo appke purane loans ko pay karti hai.Appko aur jaana hai ?",
+    "BillCut kya hai": "BillCut ek  fintech company jo appke purane loans ko pay karti hai. Appko aur jaana hai ?",
     "Kya BillCut pese chargeg karta hai": "Nahi BillCut koi pese nahi charge karta hai , bas ₹19 charge kargea legal team ke saath meeting ke leye debtsettlment mein.",
     "Kitna interest rate": "Interest rate 12 se 19 ke beech mein hota hai generally .",
     "Bohot zyada loans ": "Ji, BillCut aapke saare loans ko ek mein kar sakti hai  .",
